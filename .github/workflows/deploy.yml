@@ -23,6 +23,7 @@ jobs:
               git clone https://github.com/sumedhaj2706-tech/student-portal.git
               cd student-portal
             fi
-            sudo docker rm -f student-portal || true
+            sudo docker stop $(docker ps -q) || true
+            sudo docker rm $(docker ps -aq) || true
             sudo docker build -t student-portal .
             sudo docker run -d -p 5000:5000 student-portal
