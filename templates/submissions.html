@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submissions</title>
+</head>
+
+<body>
+
+<h1>Student Submissions</h1>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Name</th>
+    <th>USN</th>
+    <th>Project</th>
+    <th>GitHub</th>
+</tr>
+
+{% for s in submissions %}
+
+<tr>
+    <td>{{ s.name }}</td>
+    <td>{{ s.usn }}</td>
+    <td>{{ s.title }}</td>
+
+    <td>
+        <a href="{{ s.link }}" target="_blank">
+            Open Repository
+        </a>
+    </td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
