@@ -4,7 +4,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # Connect to local MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://devsync:devsync123@cluster0.mchqn3s.mongodb.net/?appName=Cluster0")
 
 # Create database
 db = client["student_portal"]
